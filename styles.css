@@ -135,6 +135,8 @@ body {
   color: #ffbd00;
   text-shadow: 0 7px 24px #bc760488;
   letter-spacing: -0.08em;
+
+  transform: translateY(20px);
 }
 
 .hero > p:last-child {
