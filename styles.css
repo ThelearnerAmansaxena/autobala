@@ -335,11 +335,15 @@ body {
 }
 
 .controls {
+
   grid-area: controls;
+  grid-column: 1 / -1;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 13px;
+  gap: 18px;
+  width: 100%;
+
 }
 
 .icon-btn,
