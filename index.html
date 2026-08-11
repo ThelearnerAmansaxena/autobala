@@ -3,70 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#071d25" />
-    <title>AutoBala — night rides & nice tunes</title>
+    <meta name="theme-color" content="#102137" />
+    <title>ऑटो वाला — The Soundtrack of Every Ride</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="scene" aria-label="AutoBala music ride">
-      <div class="grain"></div>
-      <div class="sun"></div>
-      <div class="skyline skyline--far"></div>
-      <div class="skyline skyline--near"></div>
-      <div class="road">
-        <i></i><i></i><i></i><i></i><i></i>
-      </div>
+      <div class="scene__image" aria-hidden="true"></div>
+      <div class="scene__shade" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
 
       <header class="topbar">
-        <div class="clock" aria-live="polite">
-          <span id="time">--:--</span>
-          <small id="date">LOADING DAY</small>
-        </div>
-        <button class="status" id="status" type="button" aria-label="Toggle ride status">
-          <span></span><strong id="statusText">METER ON</strong>
-        </button>
-        <div class="brand" aria-label="AutoBala"><b>Auto</b><em>Bala</em><small>THE RIDE IS THE VIBE</small></div>
+        <div class="clock" aria-live="polite"><span id="time">--:--</span><small id="date">LOADING DAY</small></div>
+        <button class="status" id="status" type="button" aria-label="Toggle ride status"><span></span><strong id="statusText">METER ON</strong></button>
       </header>
 
-      <section class="ride-copy">
-        <p class="eyebrow">BENGALURU • AFTER HOURS</p>
-        <h1>Where are<br />we <i>going?</i></h1>
-        <p class="route"><span></span> Koramangala to somewhere good</p>
+      <section class="hero">
+        <p class="eyebrow">FM 91.9 &nbsp;•&nbsp; RICKSHAW RADIO</p>
+        <h1>ऑटो वाला</h1>
+        <p>The Soundtrack of Every Ride</p>
       </section>
 
-      <aside class="street-note">
-        <span class="scribble">★</span>
-        <p>One meter.<br />Zero hurry.</p>
-      </aside>
-
-      <div class="auto" aria-hidden="true">
-        <div class="auto__roof"></div><div class="auto__hood"></div><div class="auto__windshield"></div>
-        <div class="auto__body"><div class="auto__stripe"></div><div class="auto__lamp"></div></div>
-        <div class="wheel wheel--one"></div><div class="wheel wheel--two"></div>
-        <div class="auto__sign">KA 01 <b>RIDE</b></div>
-      </div>
-
       <section class="player glass" aria-label="Fare meter music player">
-        <button class="hire-flag" id="hireFlag" type="button" aria-label="Flip availability flag">
-          <span class="hire-flag__front">FOR<br /><b>HIRE</b></span>
-          <span class="hire-flag__back">OCCU<br /><b>PIED</b></span>
-        </button>
         <div class="meter">
-          <div class="meter__label"><span>FARE</span><span id="meterState">RUNNING</span></div>
+          <div class="meter__label"><span>FARE</span><span id="meterState">WAITING</span></div>
           <output id="fare">₹ 24.00</output>
-          <div class="meter__distance"><span id="distance">0.0 KM</span><span>MIN FARE ₹24</span></div>
         </div>
+        <button class="hire-flag" id="hireFlag" type="button" aria-label="Flip availability flag"><span class="hire-flag__front">FOR <b>HIRE</b></span><span class="hire-flag__back">OCCU <b>PIED</b></span></button>
         <div class="track">
-          <div class="track__meta"><p id="trackTitle">Your YouTube playlist</p><span id="trackArtist">loading the first track…</span></div>
+          <div class="track__meta"><div><p id="trackTitle">Your YouTube playlist</p><span id="trackArtist">loading the first track…</span></div><b id="distance">01 / 03</b></div>
           <div class="scrubber"><input id="progress" type="range" min="0" max="100" value="0" aria-label="Song progress" /><div class="time"><span id="elapsed">0:00</span><span id="duration">0:00</span></div></div>
         </div>
         <div class="controls">
-          <button class="icon-btn" id="previous" type="button" aria-label="Previous track">↶</button>
+          <button class="icon-btn" id="previous" type="button" aria-label="Previous track">◀</button>
           <button class="play-btn" id="play" type="button" aria-label="Play music"><span></span></button>
-          <button class="icon-btn" id="next" type="button" aria-label="Next track">↷</button>
+          <button class="icon-btn" id="next" type="button" aria-label="Next track">▶</button>
         </div>
         <div class="volume"><span>◖</span><input id="volume" type="range" min="0" max="100" value="55" aria-label="Volume" /><span>◗</span></div>
       </section>
