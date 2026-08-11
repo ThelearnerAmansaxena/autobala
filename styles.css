@@ -83,7 +83,7 @@ body {
 .status {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -10px);
   border: 1px solid #dbe9c756;
   background: #102c36c9;
   color: var(--cream);
