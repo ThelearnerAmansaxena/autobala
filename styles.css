@@ -113,7 +113,7 @@ body {
 
 .hero {
   position: absolute;
-  top: clamp(68px, 7vh, 82px);
+  top: clamp(85px, 9vh, 105px);
   left: 0;
   right: 0;
   margin: 0;
